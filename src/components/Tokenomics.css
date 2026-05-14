@@ -1,0 +1,58 @@
+.tokenomics-section {
+  background-color: var(--bg-dark);
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.tokenomics-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tokenomics-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-metallic);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+}
+
+.token-icon {
+  color: var(--gold-metallic);
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.token-label {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.token-value {
+  font-size: clamp(1.2rem, 6vw, 2rem);
+  font-weight: 800;
+  color: var(--text-white);
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold-metallic));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-wrap: break-word;
+}
