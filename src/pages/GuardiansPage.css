@@ -1,0 +1,384 @@
+.guardians-page {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Effects */
+.guardians-bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+}
+
+.guardians-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 80px;
+}
+
+/* Reusable Components */
+.g-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.g-section {
+  padding: 100px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.g-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center;
+  background: linear-gradient(to right, #ffffff, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.g-section-desc {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.g-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.g-hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.g-hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  letter-spacing: -1px;
+}
+
+.g-hero-subtitle {
+  font-size: 1.8rem;
+  color: #d4af37;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.g-hero-desc {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.g-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.g-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  gap: 8px;
+}
+
+.g-btn-primary {
+  background: linear-gradient(135deg, #d4af37, #aa8c2c);
+  color: #000000;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.g-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+  background: linear-gradient(135deg, #f5cc41, #cca835);
+}
+
+.g-btn-outline {
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.g-btn-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: #d4af37;
+  transform: translateY(-2px);
+}
+
+/* Glassmorphism Cards */
+.g-card {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.g-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* How It Works Grid */
+.g-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.g-step-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(212, 175, 55, 0.2);
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.g-step-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.g-step-desc {
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Tables (Missions & Ranks) */
+.g-table-wrapper {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.g-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.g-table th {
+  background: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+  padding: 20px 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.g-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+}
+
+.g-table tr:last-child td {
+  border-bottom: none;
+}
+
+.g-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.g-xp-badge {
+  background: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Rules List */
+.g-rules-list {
+  list-style: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.g-rules-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e0e0e0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.g-rules-list li::before {
+  content: "•";
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* Future Rewards Grid */
+.g-rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.g-reward-item {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.g-reward-item:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-3px);
+  border-color: #d4af37;
+}
+
+/* FAQ Accordion Placeholder */
+.g-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.g-faq-item {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.g-faq-q {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.g-faq-a {
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+/* Back Link */
+.g-nav-top {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 10;
+}
+
+.g-back-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.g-back-link:hover {
+  color: #d4af37;
+}
+
+/* Leaderboard Placeholder */
+.g-leaderboard-placeholder {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px dashed rgba(212, 175, 55, 0.4);
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.g-leaderboard-placeholder h3 {
+  color: #d4af37;
+  margin-bottom: 16px;
+}
+
+.g-leaderboard-placeholder p {
+  color: #a0a0a0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .g-hero-title {
+    font-size: 2.5rem;
+  }
+  .g-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .g-section-title {
+    font-size: 2rem;
+  }
+  .g-buttons {
+    flex-direction: column;
+  }
+  .g-btn {
+    width: 100%;
+  }
+}
