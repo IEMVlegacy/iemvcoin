@@ -12,7 +12,7 @@ const GuardiansPage = () => {
   return (
     <div className="guardians-page">
       <div className="guardians-bg-glow"></div>
-      
+
       <div className="g-nav-top">
         <Link to="/" className="g-back-link">
           <ArrowLeft size={20} />
@@ -27,8 +27,8 @@ const GuardiansPage = () => {
             <h2 className="g-hero-subtitle">IEMV Guardians Program</h2>
             <h1 className="g-hero-title">Earn your place before the launch.</h1>
             <p className="g-hero-desc">
-              The IEMV Guardians Program is the official community campaign designed to reward the earliest supporters of the IEMV ecosystem.<br/><br/>
-              Complete missions, support the community, create content and climb through the ranks as IEMV evolves into a powerful community-driven ecosystem.<br/><br/>
+              The IEMV Guardians Program is the official community campaign designed to reward the earliest supporters of the IEMV ecosystem.<br /><br />
+              Complete missions, support the community, create content and climb through the ranks as IEMV evolves into a powerful community-driven ecosystem.<br /><br />
               The earliest Guardians will help shape the future of IEMV.
             </p>
             <div className="g-buttons">
@@ -36,7 +36,7 @@ const GuardiansPage = () => {
                 <Send size={18} /> Join Telegram
               </a>
               <a href="https://x.com/IEMVlegacy" target="_blank" rel="noopener noreferrer" className="g-btn g-btn-outline">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: "8px"}}><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg> Follow on X
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: "8px" }}><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg> Follow on X
               </a>
               <a href="#missions" className="g-btn g-btn-outline">
                 <Shield size={18} /> Start Missions
@@ -50,10 +50,10 @@ const GuardiansPage = () => {
           <h2 className="g-section-title">What is the Guardians Program?</h2>
           <div className="g-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <p className="g-step-desc" style={{ fontSize: '1.1rem' }}>
-              The Guardians Program is a long-term community initiative created to reward participation, engagement and ecosystem support.<br/><br/>
-              This is more than a simple airdrop campaign.<br/><br/>
-              It is a competitive community experience where participants complete quests, create content, invite new members and help strengthen the IEMV ecosystem.<br/><br/>
-              Every contribution matters.<br/><br/>
+              The Guardians Program is a long-term community initiative created to reward participation, engagement and ecosystem support.<br /><br />
+              This is more than a simple airdrop campaign.<br /><br />
+              It is a competitive community experience where participants complete quests, create content, invite new members and help strengthen the IEMV ecosystem.<br /><br />
+              Every contribution matters.<br /><br />
               As the ecosystem grows, the most active and valuable Guardians may receive exclusive future benefits inside the IEMV ecosystem.
             </p>
           </div>
@@ -90,7 +90,7 @@ const GuardiansPage = () => {
         <section id="missions" className="g-section g-container">
           <h2 className="g-section-title">Available Missions</h2>
           <p className="g-section-desc">
-            New missions and special events may be added during future ecosystem phases.<br/>
+            New missions and special events may be added during future ecosystem phases.<br />
             High-quality contributions will always receive more value than spam activity.
           </p>
           <div className="g-table-wrapper">
@@ -119,7 +119,7 @@ const GuardiansPage = () => {
         <section className="g-section g-container">
           <h2 className="g-section-title">Guardian Ranks</h2>
           <p className="g-section-desc">
-            The ranking system rewards consistency, engagement and contribution quality.<br/>
+            The ranking system rewards consistency, engagement and contribution quality.<br />
             The higher your rank, the stronger your presence inside the ecosystem.
           </p>
           <div className="g-table-wrapper">
@@ -145,13 +145,13 @@ const GuardiansPage = () => {
         <section className="g-section g-container">
           <h2 className="g-section-title">Top Guardians</h2>
           <p className="g-section-desc">
-            The leaderboard highlights the most active members of the IEMV community.<br/>
+            The leaderboard highlights the most active members of the IEMV community.<br />
             Guardians who consistently contribute to ecosystem growth may receive future recognition and exclusive opportunities.
           </p>
           <div className="g-leaderboard-image-container" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(212, 175, 55, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
-            <img 
-              src="/ranking.jpg" 
-              alt="IEMV Guardians Ranking" 
+            <img
+              src="/ranking.png"
+              alt="IEMV Guardians Ranking"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           </div>
@@ -163,7 +163,7 @@ const GuardiansPage = () => {
           <div className="g-card" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <FileText size={40} color="#d4af37" style={{ marginBottom: '20px' }} />
             <p className="g-step-desc" style={{ marginBottom: '30px', fontSize: '1.1rem' }}>
-              Complete your missions and submit your proof through the official form.<br/>
+              Complete your missions and submit your proof through the official form.<br />
               All submissions are reviewed to ensure fair participation and community quality.
             </p>
             <div style={{ textAlign: 'left', display: 'inline-block', marginBottom: '30px' }}>
@@ -174,7 +174,7 @@ const GuardiansPage = () => {
                 <li>Mission Links / Meme Upload / Video Upload</li>
               </ul>
             </div>
-            <br/>
+            <br />
             <a href="https://tally.so/r/Y5JPEq" target="_blank" rel="noopener noreferrer" className="g-btn g-btn-primary">
               <ExternalLink size={18} /> Open Submission Form
             </a>
@@ -202,7 +202,7 @@ const GuardiansPage = () => {
         <section className="g-section g-container">
           <h2 className="g-section-title">Future Ecosystem Rewards</h2>
           <p className="g-section-desc">As the IEMV ecosystem evolves, active Guardians may receive:</p>
-          
+
           <div className="g-rewards-grid">
             <div className="g-reward-item">Future token allocations</div>
             <div className="g-reward-item">Early ecosystem access</div>
@@ -213,7 +213,7 @@ const GuardiansPage = () => {
             <div className="g-reward-item">Whitelist opportunities</div>
             <div className="g-reward-item">Community rewards</div>
           </div>
-          
+
           <p className="g-section-desc" style={{ fontSize: '0.9rem' }}>
             *Final distribution models may vary depending on ecosystem development and campaign participation.
           </p>
@@ -224,7 +224,7 @@ const GuardiansPage = () => {
           <h2 className="g-section-title">Why Become an Early Guardian?</h2>
           <div className="g-card" style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p className="g-step-desc" style={{ fontSize: '1.1rem', marginBottom: '20px', textAlign: 'center' }}>
-              The strongest communities are built by the earliest believers.<br/>Joining early means:
+              The strongest communities are built by the earliest believers.<br />Joining early means:
             </p>
             <ul style={{ color: '#e0e0e0', lineHeight: '2', paddingLeft: '40px', marginBottom: '30px' }}>
               <li>Building reputation before launch</li>
@@ -269,7 +269,7 @@ const GuardiansPage = () => {
         <section className="g-section g-container" style={{ borderBottom: 'none', textAlign: 'center', paddingBottom: '40px' }}>
           <h2 className="g-section-title" style={{ fontSize: '2rem' }}>Become a Guardian Before the Next Phase Begins</h2>
           <p className="g-section-desc">
-            The IEMV ecosystem is only getting started.<br/>
+            The IEMV ecosystem is only getting started.<br />
             Join the community, complete missions and secure your place among the earliest Guardians.
           </p>
           <div className="g-buttons">
@@ -277,15 +277,15 @@ const GuardiansPage = () => {
               <Send size={18} /> Join Telegram
             </a>
             <a href="https://x.com/IEMVlegacy" target="_blank" rel="noopener noreferrer" className="g-btn g-btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: "8px"}}><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg> Follow on X
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: "8px" }}><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg> Follow on X
             </a>
             <a href="#missions" className="g-btn g-btn-primary">
-               Enter the Program
+              Enter the Program
             </a>
           </div>
         </section>
       </div>
-      
+
       <Footer />
     </div>
   );
