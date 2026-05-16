@@ -221,3 +221,12 @@
     align-items: center;
   }
 }
+
+@media (max-width: 480px) {
+  .promo-features-grid {
+    grid-template-columns: 1fr;
+  }
+  .promo-content-wrapper {
+    padding: 1.5rem 1rem;
+  }
+}

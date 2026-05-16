@@ -117,5 +117,23 @@
   }
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 2rem;
+  }
+  .animated-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .logo-text {
+    font-size: 2rem;
   }
 }

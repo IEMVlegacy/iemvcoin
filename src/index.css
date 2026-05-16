@@ -27,6 +27,18 @@ body {
   color: var(--text-soft);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Base Font */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -73,6 +85,13 @@ button {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .section {

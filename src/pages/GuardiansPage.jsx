@@ -148,14 +148,12 @@ const GuardiansPage = () => {
             The leaderboard highlights the most active members of the IEMV community.<br/>
             Guardians who consistently contribute to ecosystem growth may receive future recognition and exclusive opportunities.
           </p>
-          <div className="g-leaderboard-iframe-container" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', height: '500px', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(212, 175, 55, 0.4)' }}>
-            <iframe 
-              src="https://docs.google.com/spreadsheets/d/1ZAqpIid-BBU5z5XNhQc_Fkkr5bVNo05FRZmkQvWwaaM/htmlembed?widget=false&amp;headers=false&amp;chrome=false" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 'none' }}
-              title="IEMV Guardians Leaderboard"
-            ></iframe>
+          <div className="g-leaderboard-image-container" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(212, 175, 55, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+            <img 
+              src="/ranking.jpg" 
+              alt="IEMV Guardians Ranking" 
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
           </div>
         </section>
 
