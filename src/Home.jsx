@@ -2,6 +2,7 @@ import React from 'react';
 import TopAnnouncement from './components/TopAnnouncement';
 import Hero from './components/Hero';
 import GuardiansPromo from './components/GuardiansPromo';
+import CryptoHubPromo from './components/CryptoHubPromo';
 import About from './components/About';
 import Tokenomics from './components/Tokenomics';
 import Roadmap from './components/Roadmap';
@@ -15,6 +16,7 @@ const Home = () => {
       <TopAnnouncement />
       <Hero />
       <GuardiansPromo />
+      <CryptoHubPromo />
       <About />
       <Tokenomics />
       <Roadmap />

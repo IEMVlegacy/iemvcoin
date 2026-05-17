@@ -1,0 +1,82 @@
+.crypto-promo-section {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(212, 175, 55, 0.05));
+}
+
+.crypto-promo-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.crypto-promo-card {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: 28px;
+  background: rgba(14, 20, 34, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22);
+}
+
+.promo-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.promo-icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: rgba(212, 175, 55, 0.18);
+  color: #d4af37;
+}
+
+.crypto-promo-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.9rem, 2.5vw, 2.5rem);
+}
+
+.crypto-promo-card p {
+  color: #d2d2dc;
+  line-height: 1.8;
+}
+
+.promo-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.promo-features div {
+  padding: 1.2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.promo-features strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #f8f8fb;
+}
+
+.promo-features p {
+  margin: 0;
+  color: #b8b8c9;
+}
+
+.promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .promo-header {
+    grid-template-columns: 1fr;
+  }
+}

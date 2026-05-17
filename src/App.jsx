@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import WhitepaperPage from './pages/WhitepaperPage';
 import GuardiansPage from './pages/GuardiansPage';
+import CryptoHubPage from './pages/CryptoHubPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/whitepaper" element={<WhitepaperPage />} />
         <Route path="/guardians" element={<GuardiansPage />} />
+        <Route path="/crypto" element={<CryptoHubPage />} />
       </Routes>
     </Router>
   );

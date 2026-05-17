@@ -150,7 +150,7 @@ const GuardiansPage = () => {
           </p>
           <div className="g-leaderboard-image-container" style={{ width: '100%', maxWidth: '800px', margin: '0 auto', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(212, 175, 55, 0.4)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
             <img
-              src="/ranking.png"
+              src="public/ranking.png"
               alt="IEMV Guardians Ranking"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
