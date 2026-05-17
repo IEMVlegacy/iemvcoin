@@ -351,6 +351,21 @@
   color: #b6b6c3;
 }
 
+.coin-row {
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+
+.coin-logo {
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  object-fit:cover;
+}
+
+.coin-symbol { font-weight:700; color:#d4af37; }
+
 .crypto-change {
   font-weight: 700;
 }

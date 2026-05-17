@@ -5,11 +5,13 @@ import WhitepaperPage from './pages/WhitepaperPage';
 import GuardiansPage from './pages/GuardiansPage';
 import CryptoHubPage from './pages/CryptoHubPage';
 import Navbar from './components/Navbar';
+import LanguageModal from './LanguageModal';
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <LanguageModal />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/whitepaper" element={<WhitepaperPage />} />

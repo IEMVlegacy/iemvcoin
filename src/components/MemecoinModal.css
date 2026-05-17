@@ -1,0 +1,11 @@
+.memecoin-modal-backdrop{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,0.6);z-index:9999}
+.memecoin-modal{width:90%;max-width:820px;background:linear-gradient(180deg,#071018,#0b0f16);border:1px solid rgba(212,175,55,0.08);padding:1rem;border-radius:12px;color:#e8e8ec}
+.modal-close{position:absolute;right:1rem;top:0.8rem;background:transparent;border:0;color:#cfcfd6;font-size:1.6rem}
+.modal-header{display:flex;gap:0.8rem;align-items:center}
+.modal-header img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+.modal-header h2{margin:0}
+.modal-header .modal-links{display:flex;gap:0.6rem;margin-top:0.4rem}
+.modal-header .modal-links a{color:#cfd0d8;font-size:0.9rem;border-bottom:1px dashed rgba(255,255,255,0.04)}
+.modal-chart{height:220px;margin-top:0.8rem}
+.modal-body{margin-top:0.8rem;color:#bfc0c8;font-size:0.9rem;line-height:1.4;max-height:240px;overflow:auto;padding-right:0.5rem}
+.modal-loading{text-align:center;padding:1rem;color:#b8b8c9}

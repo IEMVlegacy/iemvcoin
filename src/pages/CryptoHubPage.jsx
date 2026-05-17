@@ -13,6 +13,7 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import './CryptoHubPage.css';
+import MemecoinGallery from '../components/MemecoinGallery';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 
@@ -34,7 +35,7 @@ const fallbackNewsFeed = [
   {
     id: 'fallback-1',
     title: 'Bitcoin se mantém acima de níveis críticos',
-    description: 'O mercado de cripto segue em recuperação enquanto traders monitoram a resistência de preço do BTC.',
+    description: 'The crypto market is recovering as traders watch BTC price resistance.',
     source: 'Crypto Center',
     url: 'https://www.coindesk.com',
   },
@@ -113,7 +114,7 @@ const quizQuestions = [
     options: [
       'Percentual do mercado total de cripto controlado pelo Bitcoin',
       'Quantidade de BTC em staking',
-      'Preço futuro esperado do Bitcoin',
+      'Expected future price of Bitcoin',
     ],
     answer: 'Percentual do mercado total de cripto controlado pelo Bitcoin',
   },
@@ -409,7 +410,7 @@ const CryptoHubPage = () => {
       },
       tooltip: {
         callbacks: {
-          label: (context) => `Preço: ${formatCurrency(context.parsed.y)}`,
+          label: (context) => `Price: ${formatCurrency(context.parsed.y)}`,
         },
       },
     },
@@ -425,7 +426,7 @@ const CryptoHubPage = () => {
     },
   };
 
-  const lastUpdatedText = lastUpdated ? `Última atualização: ${lastUpdated.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}` : 'Atualizando...';
+  const lastUpdatedText = lastUpdated ? `Last updated: ${lastUpdated.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}` : 'Refreshing...';
 
   const isFavorite = (coinId) => watchlist.includes(coinId);
 
@@ -442,12 +443,12 @@ const CryptoHubPage = () => {
       <div className="crypto-hub-hero">
         <div className="container">
           <Link to="/" className="crypto-back-link">
-            <ArrowLeft size={18} /> Voltar ao Home
+            <ArrowLeft size={18} /> Back to Home
           </Link>
           <div className="crypto-hero-content">
             <h1>Crypto Hub</h1>
             <p>
-              Tudo sobre meme coins e cripto em um só lugar. Preços em tempo real, tendências e insights para
+              Everything about memecoins and crypto in one place. Real-time prices, trends and insights to
               manter seu ecossistema conectado.
             </p>
             <div className="crypto-hero-badges">
@@ -461,7 +462,7 @@ const CryptoHubPage = () => {
             </div>
             <div className="crypto-hero-actions">
               <button type="button" className="btn btn-outline refresh-btn" onClick={refreshData}>
-                {loading ? 'Atualizando...' : 'Atualizar agora'}
+                {loading ? 'Refreshing...' : 'Refresh now'}
               </button>
             </div>
             <div className="crypto-ticker">
@@ -494,8 +495,8 @@ const CryptoHubPage = () => {
           <>
             <section className="crypto-hub-section">
               <div className="crypto-section-heading">
-                <h2>Visão geral</h2>
-                <p>Dados em tempo real para manter seu público informado e engajado.</p>
+                <h2 data-i18n-key="hub.overview.title">Visão geral</h2>
+                <p data-i18n-key="hub.overview.desc">Dados em tempo real para manter seu público informado e engajado.</p>
               </div>
 
               <div className="crypto-summary-grid">
@@ -516,7 +517,7 @@ const CryptoHubPage = () => {
               <section className="crypto-hub-section crypto-watchlist-section">
                 <div className="crypto-section-heading">
                   <h2>Minha Watchlist</h2>
-                  <p>Marque seus ativos favoritos para voltar sempre e acompanhar rápido.</p>
+                  <p>Mark your favorite assets to return quickly and track them easily.</p>
                 </div>
                 <div className="crypto-watchlist-grid">
                   {watchlist.length > 0 ? (
@@ -531,13 +532,13 @@ const CryptoHubPage = () => {
                             className={`favorite-button ${isFavorite(coinId) ? 'active' : ''}`}
                             onClick={() => toggleWatchlist(coinId)}
                           >
-                            {isFavorite(coinId) ? 'Remover' : 'Favorito'}
+                            {isFavorite(coinId) ? 'Remove' : 'Favorite'}
                           </button>
                         </div>
                       );
                     })
                   ) : (
-                    <div className="crypto-status">Adicione moedas ao seu watchlist clicando em Favorito nos cards abaixo.</div>
+                    <div className="crypto-status">Add coins to your watchlist by clicking Favorite on the cards below.</div>
                   )}
                 </div>
               </section>
@@ -545,7 +546,7 @@ const CryptoHubPage = () => {
               <section className="crypto-hub-section crypto-missions-section">
                 <div className="crypto-section-heading">
                   <h2>Missões diárias</h2>
-                  <p>Ative a comunidade com pequenas tarefas que mantém todo mundo dentro do ecossistema.</p>
+                  <p>Activate the community with small missions that keep everyone engaged in the ecosystem.</p>
                 </div>
                 <div className="crypto-missions-grid">
                   {dailyMissions.map((mission) => (
@@ -625,7 +626,7 @@ const CryptoHubPage = () => {
                 <div className="crypto-chart-header">
                   <div>
                     <h3>{selectedChartCoin.name} — Evolução {selectedTimeframe.label}</h3>
-                    <p>Selecione um ativo e veja o movimento do preço nas {selectedTimeframe.label}.</p>
+                    <p>Select an asset and view price movement over the {selectedTimeframe.label} timeframe.</p>
                   </div>
                   <div className="crypto-chart-controls">
                     <select
@@ -666,11 +667,11 @@ const CryptoHubPage = () => {
             <section className="crypto-hub-section crypto-news-section">
               <div className="section-heading-with-button">
                 <div>
-                  <h2>Central de Informação</h2>
-                  <p>Notícias e insights de cripto, finanças e mercado para sua comunidade.</p>
+                  <h2 data-i18n-key="hub.news.title">Information Center</h2>
+                  <p data-i18n-key="hub.news.desc">Crypto, finance and market news and insights for your community.</p>
                 </div>
-                <button type="button" className="btn btn-outline refresh-btn" onClick={refreshData}>
-                  Atualizar notícias
+                <button type="button" className="btn btn-outline refresh-btn" data-i18n-key="hub.news.refresh" onClick={refreshData}>
+                  Refresh news
                 </button>
               </div>
               <div className="crypto-news-grid">
@@ -678,15 +679,15 @@ const CryptoHubPage = () => {
                   newsFeed.map((item) => (
                     <article key={item.id} className="crypto-news-card">
                       <span>{item.project?.name || item.source || 'Crypto News'}</span>
-                      <h3>{item.title || 'Atualização do mercado'}</h3>
-                      <p>{item.description || 'Acompanhe as últimas movimentações e tendências do mercado cripto e financeiro.'}</p>
-                      <a href={item.project?.homepage?.[0] || item.url || '#'} target="_blank" rel="noopener noreferrer">
-                        Ver mais
+                      <h3>{item.title || 'Market update'}</h3>
+                      <p>{item.description || 'Follow the latest moves and trends in crypto and finance.'}</p>
+                      <a href={item.project?.homepage?.[0] || item.url || '#'} target="_blank" rel="noopener noreferrer" data-i18n-key="hub.news.readmore">
+                        Read more
                       </a>
                     </article>
                   ))
-                ) : (
-                  <div className="crypto-status">Sem notícias disponíveis no momento.</div>
+                  ) : (
+                  <div className="crypto-status" data-i18n-key="hub.news.non">No news available right now.</div>
                 )}
               </div>
             </section>
@@ -711,15 +712,19 @@ const CryptoHubPage = () => {
         {selectedTab === 'trends' && (
           <>
             <section className="crypto-hub-section">
+              <MemecoinGallery limit={20} />
               <div className="crypto-section-heading">
                 <h2>Top Memecoins</h2>
-                <p>As moedas que estão bombando agora e movimentando a comunidade.</p>
+                <p>Coins that are pumping right now and moving the community.</p>
               </div>
               <div className="crypto-top-coins-grid">
                 {topCoins.length > 0 ? (
                   topCoins.map((coin) => (
                     <div key={coin.id} className="crypto-top-coin-card">
-                      <span>{coin.symbol.toUpperCase()}</span>
+                      <div className="coin-row">
+                        <img src={coin.image} alt={coin.name} className="coin-logo" />
+                        <span className="coin-symbol">{coin.symbol.toUpperCase()}</span>
+                      </div>
                       <h3>{coin.name}</h3>
                       <p>{formatCurrency(coin.current_price)}</p>
                       <strong className={coin.price_change_percentage_24h >= 0 ? 'positive' : 'negative'}>
@@ -730,7 +735,7 @@ const CryptoHubPage = () => {
                         className={`favorite-button ${isFavorite(coin.id) ? 'active' : ''}`}
                         onClick={() => toggleWatchlist(coin.id)}
                       >
-                        {isFavorite(coin.id) ? 'Remover' : 'Favorito'}
+                        {isFavorite(coin.id) ? 'Remove' : 'Favorite'}
                       </button>
                     </div>
                   ))
@@ -749,17 +754,20 @@ const CryptoHubPage = () => {
                 {trendingCoins.length > 0 ? (
                   trendingCoins.map((item) => (
                     <article key={item.item.id} className="crypto-trending-card">
-                      <span>{item.item.symbol.toUpperCase()}</span>
+                      <div className="coin-row">
+                        <img src={item.item.small || item.item.thumb || item.item.large} alt={item.item.name} className="coin-logo" />
+                        <span className="coin-symbol">{item.item.symbol.toUpperCase()}</span>
+                      </div>
                       <h3>{item.item.name}</h3>
                       <p>Rank #{item.item.market_cap_rank || '–'}</p>
-                      <p>Preço: {item.item.price_btc ? `${item.item.price_btc.toFixed(8)} BTC` : 'Não disponível'}</p>
+                      <p>Price: {item.item.price_btc ? `${item.item.price_btc.toFixed(8)} BTC` : 'Not available'}</p>
                       {coinsConfig.some((coin) => coin.id === item.item.id) && (
                         <button
                           type="button"
                           className={`favorite-button ${isFavorite(item.item.id) ? 'active' : ''}`}
                           onClick={() => toggleWatchlist(item.item.id)}
                         >
-                          {isFavorite(item.item.id) ? 'Remover' : 'Favorito'}
+                          {isFavorite(item.item.id) ? 'Remove' : 'Favorite'}
                         </button>
                       )}
                     </article>
@@ -778,11 +786,11 @@ const CryptoHubPage = () => {
             <div className="crypto-education-grid">
               <article>
                 <h3>O que são memecoins?</h3>
-                <p>Memecoins são tokens criados com referências culturais da internet. Eles ganham tração por comunidade, memes e storytelling.</p>
+                <p>Memecoins are tokens created with internet culture references. They gain traction through community, memes, and storytelling.</p>
               </article>
               <article>
                 <h3>Como usar o hub</h3>
-                <p>Use esta página para comparar preços, identificar movimentos de alta e compartilhar tendências com sua comunidade.</p>
+                <p>Use this page to compare prices, spot breakouts, and share trends with your community.</p>
               </article>
               <article>
                 <h3>Estratégias de retenção</h3>

@@ -36,6 +36,13 @@
   font-size: 1.1rem;
 }
 
+.navbar-logo-img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .navbar-title strong {
   display: block;
   font-size: 1rem;

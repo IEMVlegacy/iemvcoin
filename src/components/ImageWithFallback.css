@@ -1,0 +1,2 @@
+.img-fallback { display:inline-grid; place-items:center; background:linear-gradient(180deg,#0b0e14,#0f1420); border-radius:10px; overflow:hidden }
+.img-fallback img { display:block }

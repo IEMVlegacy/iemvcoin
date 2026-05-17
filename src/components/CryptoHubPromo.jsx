@@ -13,29 +13,29 @@ const CryptoHubPromo = () => {
               <TrendingUp size={26} />
             </div>
             <div>
-              <h2>Central de Informação Crypto</h2>
-              <p>Gráficos, notícias, watchlist e alertas para sua comunidade ficar por dentro do mercado.</p>
+              <h2 data-i18n-key="promo.title">Information Center — Crypto</h2>
+              <p data-i18n-key="promo.desc">Charts, news, watchlist and alerts to keep your community up to date.</p>
             </div>
           </div>
 
           <div className="promo-features">
             <div>
-              <strong>✔️ Dados de mercado em tempo real</strong>
-              <p>Preços, volume e movimentação das principais memecoins.</p>
+              <strong data-i18n-key="promo.feature1.title">✔️ Dados de mercado em tempo real</strong>
+              <p data-i18n-key="promo.feature1.desc">Prices, volume and movement of top memecoins.</p>
             </div>
             <div>
-              <strong>✔️ Missões e quiz</strong>
-              <p>Conteúdo interativo para manter a comunidade engajada diariamente.</p>
+              <strong data-i18n-key="promo.feature2.title">✔️ Missões e quiz</strong>
+              <p data-i18n-key="promo.feature2.desc">Interactive content to keep the community engaged daily.</p>
             </div>
             <div>
-              <strong>✔️ Navegação integrada</strong>
-              <p>Abre dentro do nosso site — você mantém o tráfego e a retenção.</p>
+              <strong data-i18n-key="promo.feature3.title">✔️ Navegação integrada</strong>
+              <p data-i18n-key="promo.feature3.desc">Abre dentro do nosso site — você mantém o tráfego e a retenção.</p>
             </div>
           </div>
 
           <div className="promo-actions">
-            <Link to="/crypto" className="btn btn-primary">
-              Ir para a Central
+            <Link to="/crypto" className="btn btn-primary" data-i18n-key="promo.btn">
+              Go to Information Center
             </Link>
             <Link to="/guardians" className="btn btn-outline">
               Ver Guardians Program

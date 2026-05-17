@@ -1,0 +1,46 @@
+.memecoin-gallery {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(212,175,55,0.06);
+  border-radius: 10px;
+}
+.memecoin-gallery h3 { margin: 0 0 0.25rem; }
+.memecoin-gallery .muted { color: #a6a6b3; font-size:0.92rem; margin-bottom:0.75rem }
+.memecoin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+.memecoin-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.02);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
+}
+.memecoin-card img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.memecoin-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.42) }
+.memecoin-info { flex: 1; display:flex; flex-direction:column; gap:0.08rem }
+.memecoin-name { font-size:0.95rem }
+.memecoin-symbol { font-size:0.78rem; color:#b9b9c6 }
+.memecoin-price { font-size:0.9rem; color:#d8d8e0 }
+.memecoin-change.positive { color: #4caf50; font-weight:700 }
+.memecoin-change.negative { color: #ff6b6b; font-weight:700 }
+
+@media (max-width: 560px) {
+  .memecoin-grid { grid-template-columns: repeat(2, 1fr) }
+}
+
+.memecoin-gallery-footer{display:flex;justify-content:space-between;align-items:center;margin-top:0.75rem}
+.memecoin-gallery .pagination .page-indicator{margin:0 0.6rem;color:#bfc0c8}
+
