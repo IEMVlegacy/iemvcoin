@@ -59,6 +59,24 @@
   margin-bottom: 1.5rem;
 }
 
+.crypto-ticker {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: #f5f5f7;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.92;
+}
+
+.crypto-last-updated {
+  text-align: center;
+  color: #b1b1c8;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
 .crypto-tabs {
   display: inline-flex;
   flex-wrap: wrap;
@@ -90,6 +108,78 @@
   margin-bottom: 3rem;
 }
 
+.crypto-watchlist-section {
+  margin-top: 2rem;
+}
+
+.crypto-missions-grid,
+.crypto-watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.crypto-mission-card,
+.crypto-quiz-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.14);
+  border-radius: 24px;
+  padding: 1.5rem;
+}
+
+.crypto-mission-card.completed {
+  border-color: rgba(67, 217, 128, 0.35);
+  background: rgba(67, 217, 128, 0.08);
+}
+
+.quiz-options {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.quiz-option {
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f4f7;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quiz-option.selected,
+.quiz-option:hover {
+  background: rgba(212, 175, 55, 0.16);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.quiz-feedback {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  font-weight: 600;
+}
+
+.quiz-feedback.correct {
+  background: rgba(67, 217, 128, 0.12);
+  color: #b7f3c5;
+}
+
+.quiz-feedback.incorrect {
+  background: rgba(255, 107, 125, 0.12);
+  color: #ffb3be;
+}
+
 .crypto-section-heading {
   display: flex;
   flex-direction: column;
@@ -102,6 +192,7 @@
 }
 
 .crypto-summary-grid,
+.crypto-info-center-grid,
 .crypto-pulse-grid,
 .crypto-top-coins-grid,
 .crypto-trending-grid,
@@ -114,11 +205,13 @@
 }
 
 .crypto-summary-card,
+.crypto-info-card,
 .crypto-pulse-card,
 .crypto-card,
 .crypto-top-coin-card,
 .crypto-trending-card,
 .crypto-news-card,
+.crypto-event-card,
 .insight-card,
 .crypto-education-grid article {
   background: rgba(255, 255, 255, 0.05);
@@ -128,6 +221,7 @@
 }
 
 .crypto-summary-card span,
+.crypto-info-card span,
 .crypto-trending-card span,
 .crypto-top-coin-card span,
 .crypto-news-card span {
@@ -139,11 +233,18 @@
   margin-bottom: 0.65rem;
 }
 
+.crypto-info-card strong {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.25rem;
+}
+
 .crypto-summary-card strong,
 .crypto-top-coin-card strong,
 .crypto-card h3,
 .crypto-trending-card h3,
-.crypto-news-card h3 {
+.crypto-news-card h3,
+.crypto-event-card h3 {
   margin: 0;
 }
 
@@ -316,6 +417,81 @@
   border: 1px solid rgba(212, 175, 55, 0.18);
   background: rgba(255, 255, 255, 0.04);
   color: #f4f4f7;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.crypto-chart-select option {
+  color: #111;
+  background: #fff;
+}
+
+.crypto-chart-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.crypto-timeframe-buttons {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timeframe-button {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f4f7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timeframe-button.active,
+.timeframe-button:hover {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.crypto-watchlist-grid,
+.crypto-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.crypto-event-card span,
+.crypto-event-card h3,
+.crypto-event-card p {
+  display: block;
+}
+
+.crypto-event-card span {
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d4af37;
+}
+
+.favorite-button {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f4f4f7;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.favorite-button.active,
+.favorite-button:hover {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 .crypto-chart-container {

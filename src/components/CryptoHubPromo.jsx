@@ -13,8 +13,8 @@ const CryptoHubPromo = () => {
               <TrendingUp size={26} />
             </div>
             <div>
-              <h2>Crypto Hub oficial</h2>
-              <p>Uma área exclusiva para acompanhar memes, preços e tendências sem sair do universo IEMV.</p>
+              <h2>Central de Informação Crypto</h2>
+              <p>Gráficos, notícias, watchlist e alertas para sua comunidade ficar por dentro do mercado.</p>
             </div>
           </div>
 
@@ -24,8 +24,8 @@ const CryptoHubPromo = () => {
               <p>Preços, volume e movimentação das principais memecoins.</p>
             </div>
             <div>
-              <strong>✔️ Insights claros</strong>
-              <p>Conteúdo educativo para sua comunidade entender o que está acontecendo.</p>
+              <strong>✔️ Missões e quiz</strong>
+              <p>Conteúdo interativo para manter a comunidade engajada diariamente.</p>
             </div>
             <div>
               <strong>✔️ Navegação integrada</strong>
@@ -35,7 +35,7 @@ const CryptoHubPromo = () => {
 
           <div className="promo-actions">
             <Link to="/crypto" className="btn btn-primary">
-              Acessar Crypto Hub
+              Ir para a Central
             </Link>
             <Link to="/guardians" className="btn btn-outline">
               Ver Guardians Program
